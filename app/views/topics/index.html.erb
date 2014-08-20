@@ -1,0 +1,42 @@
+<h1>Topics</h1>
+
+<%= form_for @topic do |f| %>
+  <div class="row">
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Add", class: 'btn btn-success' %>
+    </div>
+  </div>
+<% end %>
+
+<div class="row">
+  <h4>Study Sets</h4>
+
+  <table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th># Questions</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @topics.each do |topic| %>
+      <tr>
+        <td><%= link_to topic.name, topic_questions_path( topic ) %></td>
+        <td><%= topic.questions.count %></td>
+        <td>
+          <%= link_to topic_path( topic ), method: :delete do %>
+            <span class="glyphicon glyphicon-remove"></span>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

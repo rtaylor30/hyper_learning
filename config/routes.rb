@@ -3,14 +3,16 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'home#index'
 
-  resources :topic
-  resources :set do
+  resources :topics do
+    resources :questions
+  end
+
+  resources :sets do
     member do
       get 'questions'
     end
   end
 
-  resources :question
   get 'learn' => 'learn#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,9 @@
+<h1>Create a new Question</h1>
+<%= form_for @question do |f| %>
+  <div class="row">
+    <div class="form-group">
+      <%= f.label :text %>
+      <%= f.text_field :text %>
+    </div>
+  </div>
+<% end %>

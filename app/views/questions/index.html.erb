@@ -1,0 +1,46 @@
+<h1>Questions</h1>
+
+<%= form_for @new_question, url: topic_questions_path( @topic ),
+             html: {class: 'form-inline'} do |f| %>
+  <div class="row">
+    <div class="form-group">
+      <%= f.label :text %>
+      <%= f.text_area :text, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :answer %>
+      <%= f.text_area :answer, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.submit 'Add', class: 'btn btn-success' %>
+    </div>
+  </div>
+<% end %>
+
+<div class="row">
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+      <th>Created</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.text %></td>
+        <td><%= question.answer %></td>
+        <td><%= question.created_at %></td>
+        <td>
+          <span class="glyphicon glyphicon-pencil"></span>
+          <%= link_to topic_question_path( @topic, question ), method: :delete do %>
+            <span class="glyphicon glyphicon-remove"></span>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

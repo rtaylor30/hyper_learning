@@ -1,4 +1,4 @@
-class SetController < ApplicationController
+class SetsController < ApplicationController
   before_action :authenticate_user!
 
   def questions
