@@ -43,3 +43,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'cancan'
 
+# uploading of files and CKEditor
+gem 'paperclip'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'ckeditor'
