@@ -1,28 +1,19 @@
-== README
+= Active Learning
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This web application can be started and used by anyone. This project comprises of the source code for the Ruby on Rails
+application, that can host the active learning app.
 
-Things you may want to cover:
+Active learning attempts to use some of the best techniques provided by research in learning, which are aimed at causing
+active recollection of information, rather than just passive reading through. Research has shown that quizzing yourself,
+and forcing yourself to ask exploratory questions, are what leads to better understanding, and faster memorization.
 
-* Ruby version
+Long term memory's also need to be reinforced at a regular, and expanding intervals. This ensures that information that
+is meant to be remembered for a long period of time, will be tested in a manner consistent with that.
 
-* System dependencies
+To facilitate active learning, interweaving, randomized, and paced questions are going to be asked.
 
-* Configuration
+== Deployment
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This would be deployed in the same way that any Ruby on Rails project would be deployed. Once it is up there, simply hit
+the URL you are hosting this from, and it will be ready to start accepting questions and quizzing you on a regular
+basis.
