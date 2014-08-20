@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Active Learning</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <p>
+        Take a look at how you've been doing.
+      </p>
+    </div>
+
+    <div class="col-md-6">
+      <%# Status container, that will hold the statistics of the recently accomplished goals %>
+      <section id="learning-statistics darkened">
+        <h4>Learning Statistics</h4>
+        <div class="stat-item">
+          <label>Percent Correct</label>
+          <span>83.3%</span>
+        </div>
+        <div class="stat-item">
+          <label>Completed Today?</label>
+          <span>No</span>
+        </div>
+        <div class="stat-item">
+          <label>Missed on Last</label>
+          <span>48</span>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="row">
+    <h4>Study Sets</h4>
+
+    <table class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <th>Quizzed On</th>
+        <th>Number of Questions</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @question_sets.each do |question_set| %>
+        <tr>
+          <td><%= question_set.quizzed_at %></td>
+          <td>
+            <%= link_to  "#{question_set.questions.count} Question(s)",
+                         "/set/#{question_set.id}/questions" %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

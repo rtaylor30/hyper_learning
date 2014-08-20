@@ -1,0 +1,22 @@
+<h1>Questions</h1>
+
+<div class="row">
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>Question</th>
+      <th>Created</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.text %></td>
+        <td><%= question.created_at %></td>
+        <td><span class="glyphicon glyphicon-pencil"></span></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

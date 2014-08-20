@@ -1,0 +1,40 @@
+$bg-800: #857db1;
+$bg-600: #5c5393;
+$bg-400: #3b3176;
+$bg-200: #211858;
+$bg-0: #0f083b;
+
+$accent-800: #fffbaa;
+$accent-600: #d4d06a;
+$accent-400: #aaa539;
+$accent-200: #807b15;
+$accent-0: #555100;
+
+$fg-800: #ffffff;
+$fg-600: #dddddd;
+$fg-400: #bbbbbb;
+$fg-200: #999999;
+$fg-0: #777777;
+
+$subtle-800: #ffdfaa;
+$subtle-600: #d4ad6a;
+$subtle-400: #aa7f39;
+$subtle-200: #805815;
+$subtle-0: #553500;
+
+@mixin border-radius( $radius ) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin box-shadow( $h: 1px, $v: 1px, $blur: 1px, $spread: 1px, $color: #aaaaaa ) {
+  box-shadow: $h $v $blur $spread $color;
+  -moz-box-shadow: $h $v $blur $spread $color;
+}
+
+.boxy {
+  border: 1px solid $bg-0;
+  @include border-radius( 8px );
+  @include box-shadow;
+}

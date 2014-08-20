@@ -1,0 +1,25 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "global_vars";
+@import "../bootstrap/bootstrap.scss";
+
+.darkened {
+  background-color: $bg-400;
+  color: $fg-800;
+}
+
+section {
+  @extend .boxy;
+  width: 300px;
+  padding: 13px;
+
+  div.stat-item {
+    label {
+      text-align: right;
+      width: 140px;
+      margin-right: 8px;
+    }
+  }
+}
